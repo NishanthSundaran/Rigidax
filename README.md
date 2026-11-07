@@ -14,7 +14,7 @@ dynamics over a DOF ancestor mask. It fills in frax's gaps:
 | External wrenches | per-link | per-body, MuJoCo `xfrc_applied` layout |
 | Ground truth tests | Pinocchio / MuJoCo | every quantity vs MuJoCo on random trees + G1/A2/Panda, plus Pinocchio |
 
-![Operational space control demo](examples/osc_demo.gif)
+![Operational space control demo](https://raw.githubusercontent.com/NishanthSundaran/Rigidax/master/examples/osc_demo.gif)
 
 The Panda tracks a figure-eight with operational space control (`examples/osc_demo.py`).
 rigidax computes the kinematics, Jacobian, mass matrix and bias forces in about 54 µs
@@ -25,7 +25,7 @@ simulates and renders.
 env -u PYTHONPATH MUJOCO_GL=egl python examples/osc_demo.py --out osc_demo.mp4
 ```
 
-![G1 + Dex3 hands, retargeted LAFAN1 motions](examples/g1_lafan1.gif)
+![G1 + Dex3 hands, retargeted LAFAN1 motions](https://raw.githubusercontent.com/NishanthSundaran/Rigidax/master/examples/g1_lafan1.gif)
 
 Two output variants are produced from the same solve settings. Speed on the same
 laptop with self-collision: 22.8k frames/s for the plain G1 and 18.8k for G1 + Dex3. The
@@ -142,9 +142,9 @@ MUJOCO_GL=egl python examples/render_motions.py --out g1_lafan1.gif dance1_subje
 # clip@seconds picks the window; without it the most active 10 s are used
 ```
 
-![G1 motions side by side](examples/g1_all.gif)
+![G1 motions side by side](https://raw.githubusercontent.com/NishanthSundaran/Rigidax/master/examples/g1_all.gif)
 
-![G1 whole-body control demo](examples/g1_demo.gif)
+![G1 whole-body control demo](https://raw.githubusercontent.com/NishanthSundaran/Rigidax/master/examples/g1_demo.gif)
 
 A free-floating Unitree G1 (35 DOF) squats, twists and waves while balancing on its
 feet (`examples/g1_demo.py`). Per step, rigidax computes:

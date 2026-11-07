@@ -23,6 +23,12 @@ classifiers = [
 ]
 dependencies = ["numpy", "jax>=0.4.30", "mujoco>=3.1"]
 
+[project.urls]
+Homepage = "https://github.com/NishanthSundaran/Rigidax"
+Repository = "https://github.com/NishanthSundaran/Rigidax"
+Issues = "https://github.com/NishanthSundaran/Rigidax/issues"
+Changelog = "https://github.com/NishanthSundaran/Rigidax/blob/master/CHANGELOG.md"
+
 [project.optional-dependencies]
 test = ["pytest", "pin"]
 dev = ["pytest", "pin", "ruff"]
