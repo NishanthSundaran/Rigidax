@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rigidax"
+version = "1.0.0"
+description = "Differentiable rigid-body kinematics, dynamics and batched IK / motion retargeting in JAX (MJCF + URDF)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Nishanth Sundaran", email = "sundharnishanth@gmail.com" }]
+requires-python = ">=3.10"
+keywords = ["robotics", "kinematics", "dynamics", "inverse-kinematics", "retargeting", "jax", "mujoco"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["numpy", "jax>=0.4.30", "mujoco>=3.1"]
+
+[project.optional-dependencies]
+test = ["pytest", "pin"]
+dev = ["pytest", "pin", "ruff"]
+
+[tool.setuptools.packages.find]
+include = ["rigidax*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E731", "E741"]

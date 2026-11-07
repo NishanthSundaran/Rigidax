@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.venv/
+.venv-frax/
+data/
+.venv-fraxik/
+examples/*.mp4
+dist/
+build/
