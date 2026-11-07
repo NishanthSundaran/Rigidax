@@ -215,6 +215,39 @@ GPU has not been benchmarked.
 - **G1 forearm pronation:** on the G1 this lives on `wrist_roll_link`. The twist task
   currently targets `elbow_link`.
 
+## Acknowledgements
+
+rigidax builds on the work of others:
+
+- **[frax](https://github.com/StanfordASL/frax)** (Stanford ASL, MIT): the dynamics
+  formulation rigidax starts from, its LAFAN1 retargeting setup, and the test models.
+- **[MuJoCo](https://github.com/google-deepmind/mujoco)** and
+  **[MuJoCo Menagerie](https://github.com/google-deepmind/mujoco_menagerie)**: model
+  compilation, the reference values the tests compare against, rendering, and the Unitree G1
+  (BSD-3, © Unitree Robotics) and Franka Panda (Apache-2.0) models.
+- **[LAFAN1](https://github.com/ubisoft/ubisoft-laforge-animation-dataset)** (Ubisoft La
+  Forge, CC BY-NC-ND 4.0): the human motion capture used in the retargeting demos.
+- **[GMR](https://github.com/YanjieZe/GMR)**: LAFAN1-to-G1 link offsets and arm ranges.
+- **[Pinocchio](https://github.com/stack-of-tasks/pinocchio)**: second reference
+  implementation in the tests.
+- **[JAX](https://github.com/jax-ml/jax)**.
+
+If you use the LAFAN1 data, please cite:
+
+```bibtex
+@article{harvey2020robust,
+  author  = {Félix G. Harvey and Mike Yurick and Derek Nowrouzezahrai and Christopher Pal},
+  title   = {Robust Motion In-Betweening},
+  journal = {ACM Transactions on Graphics (Proceedings of ACM SIGGRAPH)},
+  volume  = {39},
+  number  = {4},
+  year    = {2020}
+}
+```
+
+Licence details for bundled third-party files are in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
 ## Roadmap
 
 - Foot skating p95 (contact-aware per-frame weights), GPU throughput
